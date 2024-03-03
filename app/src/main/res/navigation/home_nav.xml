@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_chat"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.domonz.spendwise.Fragments.HomeFragment"
+        android:label="fragment_fetches_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_subscriptionFragment"
+            app:destination="@id/subscriptionFragment"
+            app:popUpTo="@id/homeFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_quickGrabFragment"
+            app:destination="@id/quickGrabFragment"
+            app:popUpTo="@id/homeFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/subscriptionFragment"
+        android:name="com.domonz.spendwise.Fragments.SubscriptionViewFragment"
+        android:label="fragment_userDetail"
+        tools:layout="@layout/fragment_subscription_view" >
+
+        <action
+            android:id="@+id/action_subscriptionFragment_to_quickGrabFragment"
+            app:destination="@id/quickGrabFragment"
+            app:popUpTo="@id/subscriptionFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/quickGrabFragment"
+        android:name="com.domonz.spendwise.Fragments.QuickGrabFragment"
+        android:label="fragment_userDetail"
+        tools:layout="@layout/fragment_quick_grab" />
+
+</navigation>

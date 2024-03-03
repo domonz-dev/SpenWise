@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_8sdp_stroke"
+    android:backgroundTint="#30AFA9A7"
+    android:fontFamily="@font/poppins_medium"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:paddingHorizontal="@dimen/_8sdp"
+    android:paddingVertical="@dimen/_4sdp"
+    android:text="4+ Rating"
+    android:drawableEnd="@drawable/ios_arrow_down"
+    android:drawablePadding="@dimen/_3sdp"
+    android:textSize="@dimen/_10ssp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

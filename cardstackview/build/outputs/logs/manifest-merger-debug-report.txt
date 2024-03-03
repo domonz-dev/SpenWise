@@ -1,0 +1,15 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Android_Studio\SpendWise\cardstackview\src\main\AndroidManifest.xml:3:1-58
+INJECTED from D:\Android_Studio\SpendWise\cardstackview\src\main\AndroidManifest.xml:3:1-58
+	package
+		ADDED from D:\Android_Studio\SpendWise\cardstackview\src\main\AndroidManifest.xml:3:11-56
+		INJECTED from D:\Android_Studio\SpendWise\cardstackview\src\main\AndroidManifest.xml
+uses-sdk
+INJECTED from D:\Android_Studio\SpendWise\cardstackview\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Android_Studio\SpendWise\cardstackview\src\main\AndroidManifest.xml
+INJECTED from D:\Android_Studio\SpendWise\cardstackview\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\Android_Studio\SpendWise\cardstackview\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Android_Studio\SpendWise\cardstackview\src\main\AndroidManifest.xml

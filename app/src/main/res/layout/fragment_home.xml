@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:drawableEnd="@drawable/arrow_down"
+                android:drawablePadding="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/_2sdp"
+                android:text="Work"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="end|center_vertical"
+                android:text="Hello, John!"
+                android:textSize="@dimen/_13ssp" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_10sdp"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:background="@drawable/back_8sdp_stroke"
+                    android:backgroundTint="#30AFA9A7"
+                    android:drawableEnd="@drawable/search"
+                    android:drawablePadding="@dimen/_9sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:hint="Search for meals, chefs and more"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#AAAAAA"
+                    android:textSize="@dimen/_11ssp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recSortOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_sort_option" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:background="#20AAAAAA" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="My Next Meal"
+                        android:textColor="#AAAAAA"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:background="#20AAAAAA" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layoutNextMeal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        app:cardBackgroundColor="#20AAAAAA"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/placeholder_next_meal" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:text="Biryani"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Dinner"
+                            android:textColor="#2D2A2A"
+                            android:textSize="@dimen/_13ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Arriving: 8:30pm"
+                            android:textColor="#2D2A2A"
+                            android:textSize="@dimen/_13ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:text="@string/edit"
+                            android:textColor="#FE724C"
+                            android:textSize="@dimen/_13ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textView5" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:background="#20AAAAAA" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Subscriptions"
+                        android:textColor="#AAAAAA"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:background="#20AAAAAA" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recSubscriptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_subscription" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:background="#20AAAAAA" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Popular Meals"
+                        android:textColor="#AAAAAA"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:background="#20AAAAAA" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recPopularMeals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_popular_meals" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:background="#20AAAAAA" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Offers Just For you"
+                        android:textColor="#AAAAAA"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:background="#20AAAAAA" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recOffers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_offer_card" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

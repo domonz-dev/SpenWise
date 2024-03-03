@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_height="@dimen/_400sdp"
+    app:cardBackgroundColor="#ffffff"
+    app:cardElevation="0dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_15sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#20AAAAAA">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/vegNonVeg"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:src="@drawable/veg_dot_filled"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_bold"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:text="Tawa Pulao"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vegNonVeg" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/rating_star"
+                android:drawablePadding="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="center_vertical"
+                android:text="4.6"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ruppes" />
+
+            <TextView
+                android:id="@+id/ratingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="(20)"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/rating"
+                app:layout_constraintStart_toEndOf="@+id/rating"
+                app:layout_constraintTop_toTopOf="@+id/rating" />
+
+            <TextView
+                android:id="@+id/includes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Cooked with basmati rice"
+                android:textColor="#90ffffff"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <TextView
+                android:id="@+id/ruppes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="₹99"
+                android:textColor="#ffffff"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/includes" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/left_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SKIP 👎"
+            android:background="@drawable/back_4sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:backgroundTint="@color/black"
+            android:paddingVertical="@dimen/_1sdp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_gravity="center"
+            android:textColor="#FF4141"
+            android:textSize="@dimen/_25ssp"/>
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/right_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD 👍"
+            android:background="@drawable/back_4sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:backgroundTint="@color/black"
+            android:paddingVertical="@dimen/_1sdp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_gravity="center"
+            android:textColor="#4CAF50"
+            android:textSize="@dimen/_25ssp"/>
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/top_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WANT HEALTHY?"
+            android:background="@drawable/back_4sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:backgroundTint="@color/black"
+            android:paddingVertical="@dimen/_1sdp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_gravity="center"
+            android:textColor="#4CAF50"
+            android:textSize="@dimen/_22ssp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAVE ❤️"
+            android:background="@drawable/back_4sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:backgroundTint="@color/black"
+            android:paddingVertical="@dimen/_1sdp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_gravity="center"
+            android:textColor="#4CAF50"
+            android:textSize="@dimen/_22ssp"/>
+
+    </FrameLayout>
+
+
+
+</androidx.cardview.widget.CardView>
